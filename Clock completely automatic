@@ -1,0 +1,23 @@
+import datetime
+
+import time
+
+import subprocess as sp
+
+while True:
+
+    now = datetime.datetime.now()
+
+    h=int(now.hour)
+
+    m=int(now.minute)
+
+    s=int(now.second)
+
+    print(h,':',m,':',s)
+
+    time.sleep(0.95)#change this value. 0.95 if you get lag Or fast
+
+    sp.call('clear',shell=True)
+
+    #sp.call('cls',shell=True) 
