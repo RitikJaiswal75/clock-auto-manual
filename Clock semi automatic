@@ -1,0 +1,29 @@
+import datetime
+import time
+import subprocess as sp
+now = datetime.datetime.now()
+h=int(now.hour)
+m=int(now.minute)
+s=int(now.second)
+sp.call('clear',shell=True)
+#sp.call('cls',shell=True)
+while True:
+    print(h,':',m,':',s,)
+    time.sleep(0.95) 
+    sp.call('clear',shell=True)
+    #sp.call('cls',shell=True)
+
+    if s<59:
+        s=s+1
+    else :
+        s=0
+
+        if m<59:
+            m=m+1
+        else:
+            m=0
+
+            if h<24:
+                h=h+1
+            else:
+                h=1
